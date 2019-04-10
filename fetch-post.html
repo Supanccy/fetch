@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+用户:<input type="text" name="" id='user'><br>
+密码:<input type="text" name="" id='pass'><br>
+<button class='login'>登陆</button>
+<script type="text/javascript">
+document.querySelector('.login')['onclick']=x=>{
+
+	fetch(`http://localhost:2133/loginPost`,{
+		method:'POST',
+		headers:{
+		    //下面的参数，表示传递的是一个字符串，你需要接受并解析
+			'Content-Type':'application/x-www-form-urlencoded'
+		},
+		body:`user=${user.value}&pass=${pass.value}`
+	}).then((res)=>{
+		res.json(()=>{
+
+		}).then((res)=>{
+			//console.log(res)
+			if(res.ok){
+				document.body.style.background='red';
+			}
+			else{
+				document.body.style.background='green';
+			}
+		}).catch(()=>{
+			console.log('服务器错误')
+
+		})
+	})
+}
+
+
+</script>
+
+</body>
+</html>

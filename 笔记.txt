@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fetch 交互用的 ajax 其实来说是一样
+ajax fetch socket ....form
+fetch
+ie 本身就不支持
+
+fetch - > es promise 对象有关系
+
+promise <-> 成功 异步
+			失败
+
+resolve 下决定去做这个事
+reject  拒绝去做这事
+
+new Promise((res,rej)=>{
+	res()
+}).then(()=>{
+    //被resolve调用（成功）
+},()=>{})
+    //reject调用（失败）
+.catch(()=>{
+
+})
+
+
+fetch(url,{
+	method
+}).then((res)=>{
+	res.json(()=>{
+
+	}).then(()=>{
+
+	}).catch(()=>{
+
+	})
+})
+
+ajax - > get / post
+
+setHeader
+
+
+
